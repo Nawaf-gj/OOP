@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- عرض قائمة (list) -->
+    <record id="view_ccd_example_list" model="ir.ui.view">
+        <field name="name">ccd.example.list</field>
+        <field name="model">ccd.example</field>
+        <field name="arch" type="xml">
+            <list string="CCD Example">
+                <field name="name"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- عرض نموذج (form) -->
+    <record id="view_ccd_example_form" model="ir.ui.view">
+        <field name="name">ccd.example.form</field>
+        <field name="model">ccd.example</field>
+        <field name="arch" type="xml">
+            <form string="CCD Example">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- إجراء نافذة -->
+    <record id="action_ccd_example" model="ir.actions.act_window">
+        <field name="name">CCD Example</field>
+        <field name="res_model">ccd.example</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- قائمة رئيسية -->
+    <menuitem id="menu_ccd_root" name="CCD"/>
+    <menuitem id="menu_ccd_example" parent="menu_ccd_root"
+              action="action_ccd_example" name="Examples"/>
+</odoo>

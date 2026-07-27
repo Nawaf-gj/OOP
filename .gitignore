@@ -1,0 +1,23 @@
+# بيانات الاعتماد — لا تُحفظ في Git أبداً
+.env
+.env.local
+*.key
+*.pem
+credentials.json
+
+# مخرجات التصدير
+exports/
+*.csv.out
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# أدوات
+.vscode/
+.idea/
+.DS_Store
